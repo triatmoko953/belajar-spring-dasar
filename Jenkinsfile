@@ -8,7 +8,7 @@ pipeline {
         stage('Build'){
             steps{
                 echo ("Hello build 1")
-                slep(5)
+                sleep(5)
                 echo ("Hello build 2")
                 echo ("Hello build 3")
             }
@@ -16,7 +16,7 @@ pipeline {
         stage('Test'){
             steps{
                 echo ("Hello test 1")
-                slep(5)
+                sleep(5)
                 echo ("Hello test 2")
                 echo ("Hello test 3")
             }
@@ -24,7 +24,7 @@ pipeline {
         stage('Deploy'){
             steps{
                 echo ("Hello deploy 1")
-                slep(5)
+                sleep(5)
                 echo ("Hello deploy 2")
                 echo ("Hello deploy 3")
             }
