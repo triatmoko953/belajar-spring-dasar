@@ -15,6 +15,7 @@
 	<description>Belajar Spring Dasar</description>
 	<properties>
 		<java.version>11</java.version>
+		<lombok.version>1.18.42</lombok.version>
 	</properties>
 	<dependencies>
 		<dependency>
