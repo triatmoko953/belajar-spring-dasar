@@ -20,7 +20,7 @@ pipeline {
         stage('Test'){
             steps{
 
-                scriipt{
+                script{
                     def data = [
                         "firstName" : "Tri",
                         "lastName" : "Atmoko"
