@@ -1,11 +1,12 @@
 pipeline {
-    agent {
+    agent none
+    stages{
+        stage('Build'){
+            agent {
         node {
             label "linux && java17"
         }
     }
-    stages{
-        stage('Build'){
             steps{
                 script{
                     for (int i = 0; i < 10; i++){
@@ -18,6 +19,11 @@ pipeline {
             }
         }
         stage('Test'){
+            agent {
+        node {
+            label "linux && java17"
+        }
+    }
             steps{
 
                 script{
@@ -33,6 +39,11 @@ pipeline {
             }
         }
         stage('Deploy'){
+            agent {
+        node {
+            label "linux && java17"
+        }
+    }
             steps{
                 echo ("Hello deploy 1")
                 sleep(2)
