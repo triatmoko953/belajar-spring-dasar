@@ -7,7 +7,7 @@ pipeline {
     }
 
     triggers{
-        cron("*/5 * * * *")
+        // cron("*/5 * * * *")
     }
 
     parameters{
