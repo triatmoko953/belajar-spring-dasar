@@ -9,7 +9,7 @@ pipeline {
     stages {
 
         stage('Prepare') {
-            environtment {
+            environment {
                 APP = credentials("moko_rahasia")
             }
             agent {
