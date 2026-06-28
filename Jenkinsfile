@@ -120,7 +120,7 @@ pipeline {
             }
         }
 
-        Stage("Release"){
+        Stage('Release'){
             when{
                 expression{
                     return params.DEPLOY
