@@ -198,7 +198,13 @@ pipeline {
                 }
             }
             steps {
-                echo("Release it")
+                withCredentials([usernamePass(
+                    credentialsId: "moko_rahasia",
+                    usernameVariable: "USER",
+                    passwordVariable: "PASSWORD"
+                )]){
+                    sh('echo "Release with -u $USER -p $PASSWORD" > "release.txt"')
+                }
             }
         }
     }
