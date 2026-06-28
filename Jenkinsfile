@@ -5,6 +5,10 @@ pipeline {
         AUTHOR = "Tri Atmoko"
         EMAIL = "moko@gmail.com"
     }
+    options{
+        disableConcurentBuilds()
+        timeout(time: 10, unit: 'SECONDS')
+    }
 
     stages {
 
