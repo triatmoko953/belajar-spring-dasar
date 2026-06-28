@@ -44,7 +44,7 @@ pipeline {
                             values "mac"
                         }
                         axis{
-                            name "OS"
+                            name "ARC"
                             values "32"
                         }
                     }
