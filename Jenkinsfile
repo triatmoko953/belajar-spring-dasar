@@ -119,6 +119,22 @@ pipeline {
                 echo("Deploy to ${TARGET_ENV}")
             }
         }
+
+        Stage("Release"){
+            when{
+                expression{
+                    return params.DEPLOY
+                }
+            }
+            agent {
+                node {
+                    label "linux && java17"
+                }
+            }
+            steps {
+                echo("Release it")
+            }
+        }
     }
 
     post {
