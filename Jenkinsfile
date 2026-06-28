@@ -116,10 +116,7 @@ pipeline {
                 }
             }
             steps {
-                echo("Hello deploy 1")
-                sleep(2)
-                echo("Hello deploy 2")
-                echo("Hello deploy 3")
+                echo("Deploy to ${TARGET_ENV}")
             }
         }
     }
